@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender Homepage</title>
+</head>
+<body>
+    <h1>The Greatest Movies Ever!</h1>
+    <p>Watch one of these great movies and be amazed:</p>
+    <img src = "{{ url_for('static', filename='code_quality.png')}}">
+    <ul>
+        {% for m in movies %}
+        <li> {{ m }} </li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for k in votes %}
+        <li> {{ k }} {{ votes[k] }} </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
